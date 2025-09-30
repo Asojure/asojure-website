@@ -1,8 +1,8 @@
 export const IMAGES = {
-  HERO: '/images/hero.png',
-  SERVICE_1: 'https://placehold.co/400x300?text=Service+1',
-  SERVICE_2: 'https://placehold.co/400x300?text=Service+2',
-  SERVICE_3: 'https://placehold.co/400x300?text=Service+3',
-  CONTACT: 'https://placehold.co/600x400?text=Contact+Us',
+  HERO: '/images/hero.webp',
+  SERVICE_1: '/images/familia.webp',
+  SERVICE_2: '/images/marital_de_hecho.webp',
+  SERVICE_3: '/images/contrato.webp',
+  CONTACT: '/images/contacto.webp',
 };
 

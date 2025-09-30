@@ -18,7 +18,7 @@
           <div
             class="w-14 h-14 rounded-full flex items-center justify-center shadow-md"
           >
-            <img src="/images/logo.png" alt="Logo" />
+            <img src="/images/logo.webp" alt="Logo" />
           </div>
           <div>
             <h1 class="text-3xl font-heading font-bold text-brand-dark">ASOJURE</h1>
