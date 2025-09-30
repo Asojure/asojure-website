@@ -1,5 +1,5 @@
 export const IMAGES = {
-  HERO: '/images/hero.jpeg',
+  HERO: '/images/hero.png',
   SERVICE_1: 'https://placehold.co/400x300?text=Service+1',
   SERVICE_2: 'https://placehold.co/400x300?text=Service+2',
   SERVICE_3: 'https://placehold.co/400x300?text=Service+3',
