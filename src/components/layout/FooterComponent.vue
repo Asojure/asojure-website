@@ -68,7 +68,7 @@
           <p class="text-gray-300">
             Aprobado por resolución 0596 del Ministerio de Justicia y del Derecho.
           </p>
-          <p class="text-gray-300 mt-4 font-semibold">Unidos por la justicia y la reconciliación</p>
+          <p class="text-gray-300 mt-4 font-semibold">El arte de resolver conflictos</p>
         </div>
       </div>
 

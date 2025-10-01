@@ -77,8 +77,8 @@
           />
           <div class="p-6 bg-brand-dark text-white">
             <h3 class="text-2xl font-bold mb-4 text-brand-yellow">Horario de Atención</h3>
-            <p class="text-lg mb-2">Lunes a Viernes: 8:00 AM - 6:00 PM</p>
-            <p class="text-lg">Sábados: 9:00 AM - 1:00 PM</p>
+            <p class="text-lg mb-2">Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+            <p class="text-lg">Sábados (virtual): 8:00 AM - 1:00 PM</p>
             <p class="text-sm mt-4 opacity-80">Conciliaciones presenciales y virtuales</p>
           </div>
         </Card>
