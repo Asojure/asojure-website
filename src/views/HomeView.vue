@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="">
     <HeroSection />
     <MissionSection />
     <VisionSection />

@@ -12,10 +12,12 @@ const router = createRouter({
   ],
   scrollBehavior(to) {
     if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: "smooth",
-      };
+      const element = document.querySelector(to.hash);
+      if (element) {
+        const yOffset = 50;
+        const y = element.getBoundingClientRect().top + window.pageYOffset - yOffset;
+        return { top: y, behavior: 'smooth' };
+      }
     }
     return { top: 0 };
   },

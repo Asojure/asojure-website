@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { RouterLink } from "vue-router";
+
   interface NavigationItem {
     name: string;
     href: string;
@@ -21,13 +23,13 @@
   <nav>
     <ul class="flex flex-col md:flex-row md:space-x-2">
       <li v-for="item in navigationItems" :key="item.name">
-        <a
-          :href="item.href"
+        <router-link
+          :to="item.href"
           @click="$emit('itemClicked')"
           class="block px-4 py-2 text-brand-dark font-medium hover:text-brand-purple transition-colors duration-300 rounded-lg hover:bg-gray-200 md:hover:bg-transparent"
         >
           {{ item.name }}
-        </a>
+        </router-link>
       </li>
     </ul>
   </nav>
