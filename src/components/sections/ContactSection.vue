@@ -4,7 +4,7 @@
   import { IMAGES } from "@/constants";
 
   interface ContactInfo {
-    icon: string;
+    icon: string | string[];
     title: string;
     content: string;
     link?: string;
@@ -25,14 +25,17 @@
     {
       icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
       title: "Correo",
-      content: "contacto@conciliacionasojure.com.co",
+      content: "contacto@conciliacionasojure.com.co | Asojure.27@gmail.com",
       link: "mailto:contacto@conciliacionasojure.com.co",
     },
     {
-      icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-      title: "Correo",
-      content: "Asojure.27@gmail.com",
-      link: "mailto:Asojure.27@gmail.com",
+      icon: [
+        "M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9",
+        "M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1",
+      ],
+      title: "Whatsapp",
+      content: "+57 3012167216",
+      link: "https://wa.me/573012167216",
     },
   ];
 </script>
@@ -50,13 +53,30 @@
           <div
             class="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mr-6"
           >
-            <svg class="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              class="w-8 h-8 text-brand-blue"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
+                v-if="typeof info.icon === 'string'"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
                 :d="info.icon"
               />
+
+              <template v-else-if="Array.isArray(info.icon)">
+                <path
+                  v-for="(icon, index) in info.icon"
+                  :key="index"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  :d="icon"
+                />
+              </template>
             </svg>
           </div>
           <div>
@@ -76,11 +96,7 @@
       <!-- Image and Schedule -->
       <div class="space-y-6">
         <Card class="overflow-hidden">
-          <img
-            :src="IMAGES.CONTACT"
-            alt="Oficina de Asojure"
-            class="w-full h-64 object-cover"
-          />
+          <img :src="IMAGES.CONTACT" alt="Oficina de Asojure" class="w-full h-64 object-cover" />
           <div class="p-6 bg-brand-dark text-white">
             <h3 class="text-2xl font-bold mb-4 text-brand-yellow">Horario de Atención</h3>
             <p class="text-lg mb-2">Lunes a Viernes: 8:00 AM - 5:00 PM</p>
