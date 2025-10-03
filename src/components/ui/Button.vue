@@ -1,8 +1,10 @@
 <script setup lang="ts">
+  import type { ButtonVariant, ButtonType } from "@/types";
+
   interface Props {
-    variant?: "primary" | "secondary" | "light";
+    variant?: ButtonVariant;
     href?: string;
-    type?: "button" | "submit" | "reset";
+    type?: ButtonType;
   }
 
   const props = withDefaults(defineProps<Props>(), {
@@ -10,7 +12,7 @@
     type: "button",
   });
 
-  const variantClasses = {
+  const variantClasses: Record<ButtonVariant, string> = {
     primary:
       "bg-brand-purple text-white hover:bg-opacity-90 transform hover:-translate-y-1 shadow-lg",
     secondary:

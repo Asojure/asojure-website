@@ -1,32 +1,7 @@
 <script setup lang="ts">
   import Section from "../ui/Section.vue";
   import Card from "../ui/Card.vue";
-  import { IMAGES } from "@/constants";
-
-  interface Service {
-    title: string;
-    description: string;
-    image: string;
-  }
-  const specificServices: Service[] = [
-    {
-      title: "Asuntos Familiares",
-      description:
-        "Custodia y cuidado personal, visita y protección legal de los menores, fijación de la cuota alimentaria.",
-      image: IMAGES.SERVICE_1,
-    },
-    {
-      title: "Unión Marital de Hecho",
-      description: "Declaración de Unión Marital de Hecho y sus efectos patrimoniales.",
-      image: IMAGES.SERVICE_2,
-    },
-    {
-      title: "Contratos y Obligaciones",
-      description:
-        "Disputas sobre contratos de arrendamiento, compraventa, y otros acuerdos civiles y comerciales.",
-      image: IMAGES.SERVICE_3,
-    },
-  ];
+  import { SERVICES } from "@/constants";
 </script>
 
 <template>
@@ -41,7 +16,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <Card
-        v-for="service in specificServices"
+        v-for="service in SERVICES"
         :key="service.title"
         class="transform hover:scale-105 transition-transform duration-300"
       >
