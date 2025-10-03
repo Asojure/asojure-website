@@ -48,6 +48,7 @@
         <Card
           v-for="info in contactInfo"
           :key="info.title"
+          :link="info.link"
           class="flex items-center p-4 transition-shadow duration-300"
         >
           <div
@@ -81,14 +82,7 @@
           </div>
           <div>
             <h4 class="text-lg font-bold font-heading text-brand-dark">{{ info.title }}</h4>
-            <a
-              v-if="info.link"
-              :href="info.link"
-              class="text-gray-600 hover:text-brand-purple transition-colors"
-            >
-              {{ info.content }}
-            </a>
-            <p v-else class="text-gray-600">{{ info.content }}</p>
+            <p class="text-gray-600">{{ info.content }}</p>
           </div>
         </Card>
       </div>
