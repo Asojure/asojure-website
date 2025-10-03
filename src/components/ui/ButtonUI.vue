@@ -7,7 +7,7 @@
     type?: ButtonType;
   }
 
-  const props = withDefaults(defineProps<Props>(), {
+  withDefaults(defineProps<Props>(), {
     variant: "primary",
     type: "button",
   });

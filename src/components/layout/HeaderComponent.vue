@@ -15,9 +15,7 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center space-x-4">
-          <div
-            class="w-14 h-14 rounded-full flex items-center justify-center shadow-md"
-          >
+          <div class="w-14 h-14 rounded-full flex items-center justify-center shadow-md">
             <img src="/images/logo.webp" alt="Logo" />
           </div>
           <div>

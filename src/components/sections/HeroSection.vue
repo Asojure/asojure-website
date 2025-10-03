@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import Button from "../ui/Button.vue";
+  import ButtonUi from "../ui/ButtonUI.vue";
   import { IMAGES } from "@/constants";
 </script>
 
@@ -18,7 +18,9 @@
         <h2 class="text-2xl md:text-4xl font-heading font-semibold mb-6 text-brand-yellow">
           Centro de Conciliación
         </h2>
-        <p class="text-xl md:text-2xl mb-8 font-light">Unidos por la justicia y la reconciliación</p>
+        <p class="text-xl md:text-2xl mb-8 font-light">
+          Unidos por la justicia y la reconciliación
+        </p>
         <div
           class="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-10 inline-block border border-white/20"
         >
@@ -28,8 +30,8 @@
           </p>
         </div>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="primary" href="#servicios"> Nuestros Servicios </Button>
-          <Button variant="secondary" href="#contacto"> Contáctanos </Button>
+          <ButtonUi variant="primary" href="#servicios"> Nuestros Servicios </ButtonUi>
+          <ButtonUi variant="secondary" href="#contacto"> Contáctanos </ButtonUi>
         </div>
       </div>
     </div>

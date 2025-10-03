@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  import Section from "../ui/Section.vue";
+  import SectionUi from "../ui/SectionUI.vue";
 </script>
 
 <template>
-  <Section id="vision" title="Nuestra Visión" class="bg-gray-100">
+  <SectionUi id="vision" title="Nuestra Visión" class="bg-gray-100">
     <div class="max-w-3xl mx-auto text-center">
       <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
         La visión del <strong>Centro de Conciliación ASOJURE</strong> es convertirse en líderes en
@@ -11,5 +11,5 @@
         reconocidos por nuestra excelencia en la prestación de servicios de conciliación.
       </p>
     </div>
-  </Section>
+  </SectionUi>
 </template>

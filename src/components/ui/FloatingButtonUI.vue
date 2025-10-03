@@ -1,13 +1,12 @@
 <script setup lang="ts">
-  import { useElementVisibility } from '@/composables/useElementVisibility';
-  import { CONTACT_INFO } from '@/constants';
-  import type { FloatingButtonPosition } from '@/types';
+  import { useElementVisibility } from "@/composables/useElementVisibility";
+  import type { FloatingButtonPosition } from "@/types";
 
   interface Props {
     targetElementId?: string;
     href?: string;
     text?: string;
-    position?: FloatingButtonPosition;
+    position: FloatingButtonPosition;
     bgColor?: string;
     bgColorHover?: string;
   }
@@ -17,10 +16,10 @@
   const isVisible = useElementVisibility(props.targetElementId, true);
 
   const positionClasses: Record<FloatingButtonPosition, string> = {
-    'bottom-right': 'bottom-6 right-6',
-    'bottom-left': 'bottom-6 left-6',
-    'top-right': 'top-6 right-6',
-    'top-left': 'top-6 left-6',
+    "bottom-right": "bottom-6 right-6",
+    "bottom-left": "bottom-6 left-6",
+    "top-right": "top-6 right-6",
+    "top-left": "top-6 left-6",
   };
 </script>
 
@@ -42,7 +41,7 @@
         'fixed z-50 flex items-center gap-3 text-white px-5 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group',
         props.bgColor,
         props.bgColorHover,
-        positionClasses[props.position]
+        positionClasses[props.position],
       ]"
       aria-label="Contáctanos por WhatsApp"
     >

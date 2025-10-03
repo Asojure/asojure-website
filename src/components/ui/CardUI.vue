@@ -16,7 +16,7 @@
     :class="[
       'bg-white rounded-xl shadow-md overflow-hidden',
       props.link ? 'cursor-pointer hover:shadow-lg transition-shadow duration-300' : '',
-      $props.class
+      $props.class,
     ]"
   >
     <slot />

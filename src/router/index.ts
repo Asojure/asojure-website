@@ -16,7 +16,7 @@ const router = createRouter({
       if (element) {
         const yOffset = 50;
         const y = element.getBoundingClientRect().top + window.pageYOffset - yOffset;
-        return { top: y, behavior: 'smooth' };
+        return { top: y, behavior: "smooth" };
       }
     }
     return { top: 0 };

@@ -1,4 +1,4 @@
-import { ref, onMounted, onUnmounted, type Ref } from 'vue';
+import { ref, onMounted, onUnmounted, type Ref } from "vue";
 
 /**
  * Composable to track if an element is visible in the viewport
@@ -6,10 +6,14 @@ import { ref, onMounted, onUnmounted, type Ref } from 'vue';
  * @param invert - If true, returns true when element is NOT visible
  * @returns A ref that indicates visibility state
  */
-export function useElementVisibility(elementId: string, invert = false): Ref<boolean> {
+export function useElementVisibility(elementId?: string, invert = false): Ref<boolean> {
   const isVisible = ref(false);
 
   const checkVisibility = () => {
+    if (!elementId) {
+      isVisible.value = !invert;
+      return;
+    }
     const element = document.getElementById(elementId);
 
     if (!element) {
@@ -28,13 +32,13 @@ export function useElementVisibility(elementId: string, invert = false): Ref<boo
 
   onMounted(() => {
     checkVisibility();
-    window.addEventListener('scroll', checkVisibility, { passive: true });
-    window.addEventListener('resize', checkVisibility, { passive: true });
+    window.addEventListener("scroll", checkVisibility, { passive: true });
+    window.addEventListener("resize", checkVisibility, { passive: true });
   });
 
   onUnmounted(() => {
-    window.removeEventListener('scroll', checkVisibility);
-    window.removeEventListener('resize', checkVisibility);
+    window.removeEventListener("scroll", checkVisibility);
+    window.removeEventListener("resize", checkVisibility);
   });
 
   return isVisible;

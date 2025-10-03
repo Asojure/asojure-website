@@ -2,7 +2,7 @@
   import { RouterView } from "vue-router";
   import HeaderComponent from "./components/layout/HeaderComponent.vue";
   import FooterComponent from "./components/layout/FooterComponent.vue";
-  import FloatingButton from "./components/ui/FloatingButton.vue";
+  import FloatingButtonUi from "./components/ui/FloatingButtonUI.vue";
   import { CONTACT_INFO } from "./constants";
 </script>
 
@@ -13,7 +13,7 @@
       <RouterView />
     </main>
     <FooterComponent />
-    <FloatingButton
+    <FloatingButtonUi
       target-element-id="contacto-whatsapp"
       :href="CONTACT_INFO.WHATSAPP_LINK"
       text="Contáctanos"
