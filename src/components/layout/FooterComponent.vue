@@ -66,7 +66,7 @@
         <div>
           <h3 class="text-xl font-bold mb-4 text-brand-yellow">Centro Aprobado</h3>
           <p class="text-gray-300">
-            Aprobado por resolución 0596 del Ministerio de Justicia y del Derecho.
+            Aprobado y vigilado por el Ministerio de Justicia y del Derecho, resolución 0596.
           </p>
           <p class="text-gray-300 mt-4 font-semibold">El arte de resolver conflictos</p>
         </div>

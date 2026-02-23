@@ -25,8 +25,9 @@
           class="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-10 inline-block border border-white/20"
         >
           <p class="text-lg">
-            Aprobado por resolución 0596 del<br />
-            Ministerio de Justicia y del Derecho
+            Aprobado y vigilado por el<br />
+            Ministerio de Justicia y del Derecho,<br />
+            resolución 0596.
           </p>
         </div>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
