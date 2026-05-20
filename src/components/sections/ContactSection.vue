@@ -2,6 +2,7 @@
   import SectionUi from "../ui/SectionUI.vue";
   import CardUi from "../ui/CardUI.vue";
   import IconUi from "../ui/IconUI.vue";
+  import ButtonUi from "../ui/ButtonUI.vue";
   import { IMAGES, CONTACT_INFO, BUSINESS_HOURS, ICONS } from "@/constants";
   import type { ContactInfo } from "@/types";
 
@@ -65,6 +66,23 @@
             <p class="text-lg mb-2">{{ BUSINESS_HOURS.WEEKDAY }}</p>
             <p class="text-lg">{{ BUSINESS_HOURS.SATURDAY }}</p>
             <p class="text-sm mt-4 opacity-80">{{ BUSINESS_HOURS.NOTE }}</p>
+          </div>
+        </CardUi>
+
+        <!-- Satisfaction Survey -->
+        <CardUi class="overflow-hidden">
+          <div class="p-6 bg-brand-purple text-white text-center">
+            <h4 class="text-xl font-bold mb-2 font-heading">¿Cómo fue tu experiencia?</h4>
+            <p class="mb-4 opacity-90 text-sm">
+              Tu opinión nos permite mejorar nuestros servicios de conciliación.
+            </p>
+            <ButtonUi
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf2E-HUyreUvVBtRr2Gfm101JDujA1RvP-060tcWi9GtWNXJA/viewform"
+              variant="light"
+              target="_blank"
+            >
+              Evalúanos
+            </ButtonUi>
           </div>
         </CardUi>
       </div>

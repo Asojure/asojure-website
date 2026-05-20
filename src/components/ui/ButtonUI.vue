@@ -5,6 +5,7 @@
     variant?: ButtonVariant;
     href?: string;
     type?: ButtonType;
+    target?: string;
   }
 
   withDefaults(defineProps<Props>(), {
@@ -26,6 +27,7 @@
     :is="href ? 'a' : 'button'"
     :href="href"
     :type="!href ? type : undefined"
+    :target="target ? target : undefined"
     :class="[
       'px-8 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 inline-block text-center',
       variantClasses[variant],
