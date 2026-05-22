@@ -6,6 +6,7 @@
     href?: string;
     type?: ButtonType;
     target?: string;
+    download?: string | boolean;
   }
 
   withDefaults(defineProps<Props>(), {
@@ -28,6 +29,7 @@
     :href="href"
     :type="!href ? type : undefined"
     :target="target ? target : undefined"
+    :download="download ? download : undefined"
     :class="[
       'px-8 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 inline-block text-center',
       variantClasses[variant],

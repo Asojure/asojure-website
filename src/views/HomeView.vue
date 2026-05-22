@@ -3,6 +3,7 @@
   import MissionSection from "../components/sections/MissionSection.vue";
   import VisionSection from "../components/sections/VisionSection.vue";
   import ServicesSection from "../components/sections/ServicesSection.vue";
+  import SuggestionsSection from "../components/sections/SuggestionsSection.vue";
   import ContactSection from "../components/sections/ContactSection.vue";
 </script>
 
@@ -13,5 +14,6 @@
     <VisionSection />
     <ServicesSection />
     <ContactSection />
+    <SuggestionsSection />
   </div>
 </template>
