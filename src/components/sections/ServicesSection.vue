@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import SectionUi from "../ui/SectionUI.vue";
   import CardUi from "../ui/CardUI.vue";
-  import { SERVICES } from "@/constants";
+  import ButtonUi from "../ui/ButtonUI.vue";
+  import { createWhatsAppLink, SERVICES } from "@/constants";
 </script>
 
 <template>
@@ -14,22 +15,45 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="services-grid grid grid-cols-1 md:grid-cols-2 gap-8">
       <CardUi
         v-for="service in SERVICES"
         :key="service.title"
-        class="transform hover:scale-105 transition-transform duration-300"
+        class="service-card flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
       >
         <img
           :src="service.image"
           :alt="service.title"
           class="rounded-t-lg h-48 w-full object-cover"
         />
-        <div class="p-6">
+        <div class="p-6 flex flex-1 flex-col">
           <h3 class="text-xl font-bold font-heading mb-2 text-brand-dark">{{ service.title }}</h3>
-          <p class="text-gray-600">{{ service.description }}</p>
+          <p class="text-gray-600 flex-1">{{ service.description }}</p>
+          <ButtonUi
+            :href="createWhatsAppLink(service.whatsappMessage)"
+            variant="outline"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 w-full min-h-14"
+          >
+            {{ service.ctaLabel }}
+          </ButtonUi>
         </div>
       </CardUi>
     </div>
   </SectionUi>
 </template>
+
+<style scoped>
+  @media (min-width: 1024px) {
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .service-card {
+      flex: 0 1 calc((100% - 4rem) / 3);
+    }
+  }
+</style>

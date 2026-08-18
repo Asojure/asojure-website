@@ -1,8 +1,11 @@
+import type { Service } from "@/types";
+
 export const IMAGES = {
   HERO: "/images/hero.webp",
   SERVICE_1: "/images/familia.webp",
   SERVICE_2: "/images/marital_de_hecho.webp",
   SERVICE_3: "/images/contrato.webp",
+  SERVICE_4: "/images/insolvencia.webp",
   CONTACT: "/images/contacto.webp",
 };
 
@@ -16,29 +19,49 @@ export const CONTACT_INFO = {
   WHATSAPP_LINK: "https://wa.me/573012167216",
 };
 
+export const createWhatsAppLink = (message: string) =>
+  `${CONTACT_INFO.WHATSAPP_LINK}?text=${encodeURIComponent(message)}`;
+
 export const BUSINESS_HOURS = {
   WEEKDAY: "Lunes a Viernes: 8:00 AM - 5:00 PM",
   SATURDAY: "Sábados (virtual): 8:00 AM - 1:00 PM",
   NOTE: "Conciliaciones presenciales y virtuales",
 };
 
-export const SERVICES = [
+export const SERVICES: Service[] = [
+  {
+    title: "Insolvencia de persona natural no comerciante y pequeño comerciante",
+    description:
+      "Resolución 1372 del 27 de julio del 2026. La insolvencia de persona natural no comerciante y pequeño comerciante es un mecanismo legal que permite reorganizar deudas, suspender embargos y proteger el patrimonio de manera ágil, segura y confiable, en el marco de la Ley 2445 de 2025.",
+    image: IMAGES.SERVICE_4,
+    ctaLabel: "Consultar mi caso de insolvencia",
+    whatsappMessage:
+      "Hola, deseo recibir información sobre el servicio de insolvencia de persona natural no comerciante y pequeño comerciante.",
+  },
   {
     title: "Asuntos Familiares",
     description:
       "Custodia y cuidado personal, visita y protección legal de los menores, fijación de la cuota alimentaria.",
     image: IMAGES.SERVICE_1,
+    ctaLabel: "Orientarme sobre mi caso familiar",
+    whatsappMessage: "Hola, deseo recibir información sobre el servicio de Asuntos Familiares.",
   },
   {
     title: "Unión Marital de Hecho",
     description: "Declaración de Unión Marital de Hecho y sus efectos patrimoniales.",
     image: IMAGES.SERVICE_2,
+    ctaLabel: "Declarar mi unión marital",
+    whatsappMessage:
+      "Hola, deseo recibir información sobre la declaración de Unión Marital de Hecho y sus efectos patrimoniales.",
   },
   {
     title: "Contratos y Obligaciones",
     description:
       "Disputas sobre contratos de arrendamiento, compraventa, y otros acuerdos civiles y comerciales.",
     image: IMAGES.SERVICE_3,
+    ctaLabel: "Revisar mi contrato u obligación",
+    whatsappMessage:
+      "Hola, deseo recibir información sobre el servicio de Contratos y Obligaciones.",
   },
 ];
 

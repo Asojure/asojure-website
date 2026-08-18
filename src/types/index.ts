@@ -10,6 +10,14 @@ export interface ContactInfo {
   id?: string;
 }
 
-export type ButtonVariant = "primary" | "secondary" | "light";
+export interface Service {
+  title: string;
+  description: string;
+  image: string;
+  ctaLabel: string;
+  whatsappMessage: string;
+}
+
+export type ButtonVariant = "primary" | "secondary" | "light" | "outline";
 export type ButtonType = "button" | "submit" | "reset";
 export type FloatingButtonPosition = "bottom-right" | "bottom-left" | "top-right" | "top-left";
