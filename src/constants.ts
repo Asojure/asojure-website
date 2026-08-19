@@ -32,7 +32,7 @@ export const SERVICES: Service[] = [
   {
     title: "Insolvencia de persona natural no comerciante y pequeño comerciante",
     description:
-      "Resolución 1372 del 27 de julio del 2026. La insolvencia de persona natural no comerciante y pequeño comerciante es un mecanismo legal que permite reorganizar deudas, suspender embargos y proteger el patrimonio de manera ágil, segura y confiable, en el marco de la Ley 2445 de 2025.",
+      "Resolución 1372 de 2026. La insolvencia de persona natural no comerciante y pequeño comerciante es un mecanismo legal que permite reorganizar deudas, suspender embargos y proteger el patrimonio de manera ágil, segura y confiable, en el marco de la Ley 2445 de 2025.",
     image: IMAGES.SERVICE_4,
     ctaLabel: "Consultar mi caso de insolvencia",
     whatsappMessage:
